@@ -1,12 +1,16 @@
 ---
-- name: install python
-  raw: yum install -y python-simplejson
-  register: result
-  
-- debug: var=result
+# This playbook contains common plays that will be run on all nodes.
 
-- name: install python
-  raw: yum install -y python-simplejson
-  register: result
-  
-- debug: var=result
+- name: Install ntp 
+  yum: name=ntp state=present
+  tags: ntp
+
+- name: Configure ntp file
+  template: src=ntp.conf.j2 dest=/etc/ntp.conf
+  tags: ntp
+  notify: restart ntp
+
+- name: Start the ntp service
+  service: name=ntpd state=started enabled=yes
+  tags: ntp
+
