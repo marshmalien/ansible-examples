@@ -1,0 +1,6 @@
+---
+- name: install python
+  raw: yum install -y python-simplejson
+  register: result
+  
+- debug: var=result
