@@ -1,0 +1,10 @@
+---
+name: testing filters
+hosts: prod-srv:&dev-srv
+
+tasks:
+  name: echo on all hosts
+  shell: echo "Hello World"
+  register: test
+  
+- debug: var=test
