@@ -1,13 +1,11 @@
 ---
-- name: install python
-  raw: yum install -y python-simplejson
-  register: result
+- name: install python-simplejson
+  hosts: all
   
-- debug: var=result
+  tasks:
 
-
-- name: install python
-  raw: yum install -y python-simplejson
-  register: result
+  - name: install python
+    raw: yum install -y python-simplejson
+    register: result
   
-- debug: var=result
+  - debug: var=result
