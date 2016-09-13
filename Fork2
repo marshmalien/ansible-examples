@@ -1,0 +1,8 @@
+- hosts: all
+  remote_user: ec2-user
+  gather_facts: no
+  tasks:
+  
+    - file:
+        path: /opt/test
+        state: absent
