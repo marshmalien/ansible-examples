@@ -3,11 +3,11 @@
   remote_user: ec2-user
   become: yes
   tasks:
-    #- file:
-    #    path: "{{ item }}"
-    #    state: directory
-    #    mode: 0o0700
-    #  with_items:
+    - file:
+        path: "{{ item }}"
+        state: directory
+        mode: 0o0700
+      with_items:
         - /opt/test/6555b322075c3a2933b422822051c864
         - /opt/test/c2b5e864be8064373611227c8a6c555d
         - /opt/test/291ef99da8c38e4245012d242cd02466
