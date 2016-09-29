@@ -11,8 +11,7 @@
     apt: name={{item}} state=present
     with_items:
     - git
-    - apache
-    - mysql
+    
     
   - name: create new user
     user: name={{item}} state=present
