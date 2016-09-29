@@ -1,0 +1,17 @@
+---
+
+- name: Gathering information from ec2 windows machines
+  hosts: localhost
+  connection: local
+  
+  tasks:
+  
+  - name: use ec2_facts on windows
+    ec2_remote_facts:
+      region: us-west-2
+      filters:
+        instance-state-name: running
+        "tag:Name": mperz-windows
+    register: output
+
+  - debug: var=output
