@@ -2,7 +2,7 @@
 
 - name: Gathering information from ec2 windows machines
   hosts: localhost
-#  connection: local
+  connection: local
   
   tasks:
   
