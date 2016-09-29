@@ -1,0 +1,21 @@
+---
+
+- name: Testing canceled zombie jobs
+  hosts: Bugtest
+  remote_user: ubuntu
+  become: yes
+  
+  tasks:
+  
+  - name: install some stuff
+    apt: name={{item}} state=present
+    with_items:
+    - git
+    - apache
+    - mysql
+    
+  - name: create new user
+    user: name={{item}} state=present
+    with_items:
+    - ansible
+    - gmuniz
