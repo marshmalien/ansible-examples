@@ -8,13 +8,13 @@
   tasks:
   
   - name: install some stuff
-    apt: name={{item}} state=present
+    apt: name={{item}} state=absent
     with_items:
     - git
     
     
   - name: create new user
-    user: name={{item}} state=present
+    user: name={{item}} state=absent
     with_items:
     - ansible
     - gmuniz
