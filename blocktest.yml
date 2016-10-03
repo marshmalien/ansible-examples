@@ -9,11 +9,12 @@
        - name: copying in a block
          copy: src=/tmp/test1.txt dest=/tmp/loops
       rescue:
-       - debug: msg="Stop. Error time."
-      always:
-       - debug: msg="This message will always display."
+       - name: copying in a block
+         copy: src=/tmp/test1.txt dest=/tmp/loops
+      #always:
+       #- debug: msg="This message will always display."
 
-    - block:
-       - block:
-          - block:
-             - debug: msg="nesting some blocks" 
+    #- block:
+     #  - block:
+     #     - block:
+      #       - debug: msg="nesting some blocks" 
