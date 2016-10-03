@@ -1,4 +1,4 @@
  ---
  
  - name: copying in a block
-         copy: src=/tmp/test1.txt dest=/tmp/loops
+   copy: src=/tmp/test1.txt dest=/tmp/loops
