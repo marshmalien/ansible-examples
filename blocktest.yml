@@ -1,6 +1,6 @@
 ---
 - name: testing blocks
-  hosts: testServer
+  hosts: all
   remote_user: ec2-user
   become: yes
 
