@@ -9,8 +9,7 @@
        - name: copying in a block
          copy: src=/tmp/test1.txt dest=/tmp/loops
       rescue:
-       - name: copying in a block
-         copy: src=/tmp/test1.txt dest=/tmp/loops
+       - include: copyblock.yml
       #always:
        #- debug: msg="This message will always display."
 
