@@ -1,11 +1,15 @@
 ---
 - name: install python-simplejson
   hosts: all
+  remote_user: ec2-user
+  become: yes
   
   tasks:
 
   - name: install python
-    raw: yum install -y python-simplejson
+    yum: name=firewalld state=present
     register: result
   
   - debug: var=result
+  - name: start firewalld
+    service: name=firewalld state=started
