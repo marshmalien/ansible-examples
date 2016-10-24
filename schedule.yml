@@ -1,0 +1,14 @@
+- name: testing win scheduled tasks
+  hosts: all
+  tasks:
+  - name: Run Tasks
+      win_scheduled_task: 
+        name: "MyTask" 
+        execute: "My.Tasks.exe" 
+        frequency: "daily" 
+        time: "2am" 
+        description: "Run My.Tasks" 
+        path: "C:\\Apps\\MyApp\\UserTask" 
+        enable: yes 
+        state: present 
+        user: SYSTEM
