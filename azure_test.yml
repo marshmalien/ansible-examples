@@ -1,6 +1,5 @@
 - name: Testing the azure_rm_virtualmachine
   hosts:localhost
-  connection: local
   tasks:
 
 - name: azure init
