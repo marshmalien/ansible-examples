@@ -9,7 +9,6 @@
        name: testvm10
        vm_size: Standard_D1
        admin_username: centos
-       ssh_password: false
        image:
          offer: CentOS
          publisher: OpenLogic
