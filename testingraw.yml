@@ -16,6 +16,7 @@
   hosts: all
   remote_user: ec2-user
   become: yes
+  gather_facts: no
   tasks:
   - name: start firewalld
     service: name=firewalld state=started
