@@ -12,8 +12,12 @@
     tags:
       - test
   
-  - debug: var=result
+- name: testing to see if this tag runs
+  hosts: all
+  remote_user: ec2-user
+  become: yes
+  tasks:
   - name: start firewalld
     service: name=firewalld state=started
-  #  tags:
-   #   - do_not_run
+    tags:
+      - do_not_run
