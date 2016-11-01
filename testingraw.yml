@@ -15,5 +15,5 @@
   - debug: var=result
   - name: start firewalld
     service: name=firewalld state=started
-    tags:
-      - do_not_run
+  #  tags:
+   #   - do_not_run
