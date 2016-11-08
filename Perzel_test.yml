@@ -1,0 +1,10 @@
+---
+- name: Local Commands
+  hosts: 127.0.0.1
+  connection: local
+  gather_facts: false
+
+  tasks:
+  - name: Run command locally
+    shell: "whoami"
+    register: output
