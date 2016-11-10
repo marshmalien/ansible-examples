@@ -2,5 +2,5 @@
 - hosts: localhost
   gather_facts: no
   tasks:
-    - command: /usr/bin/ping -c 2 52.38.234.238
+    - command: /bin/ping -c 2 52.38.234.238
     - debug: var=pingout
