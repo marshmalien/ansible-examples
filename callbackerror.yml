@@ -8,4 +8,4 @@
       transport: cli
   tasks:
   
-  - setup
+  - setup:
