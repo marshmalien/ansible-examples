@@ -4,4 +4,5 @@
   become: yes
   tasks:
     - command: hostname
+    - debug: var=hostname
     
