@@ -1,0 +1,11 @@
+- name: testing callback stuff
+  hosts: all
+  vars:
+    cli:
+      host: "{{ inventory_hostname }}"
+      username: admin
+      password: admin
+      transport: cli
+  tasks:
+  
+  - setup
