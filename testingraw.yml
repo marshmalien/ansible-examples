@@ -1,24 +1,10 @@
 ---
-- name: install python-simplejson
+- name: testing awx
   hosts: all
   remote_user: ec2-user
   become: yes
   
   tasks:
+    - copy: src=/etc/sudoers dest=/etc/sudoers.bak
 
-  - name: install python
-    yum: name=firewalld state=present
-    register: result
-    tags:
-      - test
-  
-- name: testing to see if this tag runs
-  hosts: all
-  remote_user: ec2-user
-  become: yes
-  gather_facts: no
-  tasks:
-  - name: start firewalld
-    service: name=firewalld state=started
-    tags:
-      - do_not_run
+ 
