@@ -3,5 +3,5 @@
   connection: local
   tasks:
     - command: hostname
-    - debug: var=hostname
+    - debug: msg=hostname
     
