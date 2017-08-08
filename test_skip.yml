@@ -2,6 +2,7 @@
 - name: testing conditional
   hosts: all
   gather_facts: no
+  any_errors_fatal: no
   tasks:
   - name: hostname
     shell: 'id'
