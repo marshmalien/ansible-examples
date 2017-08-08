@@ -1,0 +1,15 @@
+---
+- name: testing conditional
+  hosts: all
+  gather_facts: no
+  tasks:
+  - name: hostname
+    shell: 'id'
+    register: stuff
+    when: foo==false
+  - name: uptime
+    shell: 'uptime'
+    register: output
+    when: foo==false
+  - debug: msg="{{ output}}"
+    when: foo==false
