@@ -10,4 +10,3 @@
   - name: List ansible packages and register result to print with debug later.
     yum:
       list: ansible
-      shell: echo "Hi! Yum is working."
