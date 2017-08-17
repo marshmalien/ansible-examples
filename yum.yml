@@ -1,0 +1,13 @@
+---
+- name: Yum World!
+  hosts: all
+ 
+  tasks:
+ 
+  - name: Hello World!
+    shell: echo "Hi! Tower is working."
+
+  - name: List ansible packages and register result to print with debug later.
+    yum:
+      list: ansible
+      register: result
