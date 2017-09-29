@@ -2,10 +2,10 @@
 - name: testing local with conditional
   hosts: all
   gather_facts: no
-#  any_errors_fatal: yes
+  any_errors_fatal: yes
   tasks:
 
-#  - debug: msg="{{ ansible_user}}"
+  - debug: msg="{{ ansible_user}}"
   - name: hostname
     shell: 'id'
     register: stuff
