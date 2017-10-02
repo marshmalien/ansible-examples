@@ -19,4 +19,4 @@
   - debug: msg="{{ output}}"
     when: foo==false
   - debug: var=recursive
-  - asdf
+  - asdf: asdf
