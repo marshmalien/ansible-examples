@@ -3,6 +3,8 @@
   hosts: all
   gather_facts: no
   any_errors_fatal: yes
+  vars:
+    recursive: "{{ recursive | default('I probably should not do this') }}"
   tasks:
 
   - debug: msg="{{ ansible_user}}"
@@ -16,3 +18,5 @@
     when: foo==false
   - debug: msg="{{ output}}"
     when: foo==false
+  - debug: var=recursive
+  - asdf
