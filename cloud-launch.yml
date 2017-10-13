@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: False
+
+  tasks:
+  - name: Create Azure subnet
+    azure_rm_subnet:
+      resource_group: "azure-test"
+      name: "test-sn"
+      state: present
+      address_prefix: "10.10.0.0/24"
+      address_cow: test
+      virtual_network: "test-vn"
