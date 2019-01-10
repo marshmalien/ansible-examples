@@ -1,0 +1,27 @@
+- hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: ok1
+      debug:
+
+    - name: ok2 and changed
+      debug:
+      changed_when: True
+
+    - name: skipped
+      debug:
+      when: False
+
+    - block:
+        - name: rescued
+          fail:
+      rescue:
+        - name: ok3
+          debug:
+
+    - name: ok4 and ignored
+      fail:
+      ignore_errors: yes
+
+    - name: failed
+      fail:
